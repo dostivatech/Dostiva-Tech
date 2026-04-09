@@ -5,10 +5,16 @@ export default function Schema() {
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "Organization",
-      name: "Dostiva Technologies",
-      url: "https://dostiva-tech.netlify.app", // change to your real domain later
-      logo: "https://dostiva-tech.netlify.app/logo.png", // update if needed
-      sameAs: [],
+      "name": "Dostiva Tech",
+      "url": "https://tech.dostiva.site",
+      "logo": "https://tech.dostiva.site/logo.png",
+      "image": "https://tech.dostiva.site/logo.png",
+      "sameAs": [
+        // add these later when you have them
+        // "https://www.facebook.com/yourpage",
+        // "https://www.instagram.com/yourpage",
+        // "https://www.linkedin.com/company/yourpage"
+      ]
     };
 
     const script = document.createElement("script");

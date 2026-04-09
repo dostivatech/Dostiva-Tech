@@ -9,7 +9,7 @@ const servicesSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Dostiva Tech ",
-    "url": "https://tech.dostiva.site"
+    "url": "https://tech.dostiva.site/Services",
   },
   "areaServed": "IN",
   "serviceType": [

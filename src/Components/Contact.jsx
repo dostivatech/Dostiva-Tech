@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
+import { sendContact } from "../api/contactApi"
 
 export default function Contact() {
   const { state } = useLocation();
@@ -12,10 +13,12 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("/.netlify/functions/send-email", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, phone, message }),
+    const res = await sendContact({
+      name,
+      email,
+      message,
+      phone,
+      app: "dostiva-tech",
     });
 
     if (res.ok) {
@@ -48,7 +51,7 @@ export default function Contact() {
           )}
         </div>
 
-        <form
+        <form  
           onSubmit={handleSubmit}
           className="relative z-20 bg-slate-50 p-6 rounded-xl grid gap-4"
         >
